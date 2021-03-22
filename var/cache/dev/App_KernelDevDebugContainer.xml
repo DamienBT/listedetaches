@@ -5444,18 +5444,11 @@
         <argument key="task" type="service" id=".errored..service_locator.MTCLXzR.App\Entity\Task"/>
       </argument>
     </service>
-    <service id=".service_locator.TfvLzuL" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="task" type="service" id=".errored..service_locator.TfvLzuL.App\Entity\Task"/>
-      </argument>
-    </service>
-    <service id=".service_locator.2Hr1DX4" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.ue4Livp" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\TaskController::delete" type="service" id=".service_locator.MTCLXzR"/>
         <argument key="App\Controller\TaskController::edit" type="service" id=".service_locator.hJCqGfU"/>
-        <argument key="App\Controller\TaskController::getTask" type="service" id=".service_locator.TfvLzuL"/>
         <argument key="App\Controller\TaskController::index" type="service" id=".service_locator.sgRUSsb"/>
         <argument key="App\Controller\TaskController::new" type="service" id=".service_locator.5miB8_X"/>
         <argument key="App\Kernel::loadRoutes" type="service" id=".service_locator.KfbR3DY"/>
@@ -5466,7 +5459,6 @@
         <argument key="kernel::terminate" type="service" id=".service_locator.KfwZsne"/>
         <argument key="App\Controller\TaskController:delete" type="service" id=".service_locator.MTCLXzR"/>
         <argument key="App\Controller\TaskController:edit" type="service" id=".service_locator.hJCqGfU"/>
-        <argument key="App\Controller\TaskController:getTask" type="service" id=".service_locator.TfvLzuL"/>
         <argument key="App\Controller\TaskController:index" type="service" id=".service_locator.sgRUSsb"/>
         <argument key="App\Controller\TaskController:new" type="service" id=".service_locator.5miB8_X"/>
         <argument key="kernel:loadRoutes" type="service" id=".service_locator.KfbR3DY"/>
@@ -5931,12 +5923,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.2Hr1DX4"/>
+      <argument type="service" id=".service_locator.ue4Livp"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.2Hr1DX4"/>
+      <argument type="service" id=".service_locator.ue4Livp"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -5950,7 +5942,6 @@
     <service id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
     <service id=".errored..service_locator.hJCqGfU.App\Entity\Task" class="App\Entity\Task"/>
     <service id=".errored..service_locator.MTCLXzR.App\Entity\Task" class="App\Entity\Task"/>
-    <service id=".errored..service_locator.TfvLzuL.App\Entity\Task" class="App\Entity\Task"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <tag name="container.no_preload"/>
       <argument type="service" id=".service_locator.mQAlvpm"/>
@@ -6349,7 +6340,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.2Hr1DX4"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.ue4Livp"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

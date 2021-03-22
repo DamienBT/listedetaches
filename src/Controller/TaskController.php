@@ -30,7 +30,7 @@ class TaskController extends AbstractController
 
 
 
-        return $this->render('home/home.html.twig', [
+        return $this->render('task/index.html.twig', [
             'tasks' => $tasks,
             'notifications' => $notifications
         ]);
@@ -93,16 +93,5 @@ class TaskController extends AbstractController
         }
 
         return new JsonResponse('tache supprimé avec succès', 200);
-    }
-
-    /**
-     * @Route("/tache/{id}", name="task_get", methods={"GET","POST"})
-     */
-    public function getTask(Task $task, Request $request): Response
-    {
-        $date = date_format($task->getBeginAt(), 'd/m/Y');
-        $response = array("id" => $task->getId(), "task" => $task->getName(), "desc" => $task->getDescription(), "date" => $date);
-
-        return new JsonResponse($response, 200);
     }
 }

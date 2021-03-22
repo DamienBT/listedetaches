@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     $("btn#buttonEdit").hide();
 
-    check();
+    init();
     function resetState() {
         $("btn#buttonSend").show();
         $("btn#buttonEdit").hide();
@@ -13,9 +13,32 @@ $(document).ready(function () {
 
     }
 
+    function checkData(name, desc, date) {
+        $("#task_name").removeClass("is-invalid");
+        $("#task_beginAt").removeClass("is-invalid");
+
+        var error = false;
+
+        if (name == "") {
+            $("#task_name").addClass("is-invalid");
+            error = true;
+        }
+        if (date == "") {
+            $("#task_beginAt").addClass("is-invalid");
+            error = true;
+        }
+
+        if (error == true) {
+            return false;
+        } else {
+            return true;
+        }
+
+    };
+
     // delete
 
-    function check() {
+    function init() {
 
 
         $("btn[data-action='delete'").on("click", function (e) {
@@ -41,20 +64,23 @@ $(document).ready(function () {
                 desc: desc,
                 date: date
             }
-            $.ajax({
-                type: "POST",
-                url: '/edit-tache/' + id,
-                data: json
-            })
-            $("td.columnName" + id).empty();
-            $("td.columndesc" + id).empty();
-            $("td.columndate" + id).empty();
-            $("td.columnName" + id).text(name);
-            $("td.columndesc" + id).text(desc);
-            $("td.columndate" + id).text(date);
-            resetState();
+            if (checkData(name, desc, date) == true) {
+                $.ajax({
+                    type: "POST",
+                    url: '/edit-tache/' + id,
+                    data: json
+                })
+                $("td.columnName" + id).empty();
+                $("td.columndesc" + id).empty();
+                $("td.columndate" + id).empty();
+                $("td.columnName" + id).text(name);
+                $("td.columndesc" + id).text(desc);
+                $("td.columndate" + id).text(date);
+                resetState();
 
-            return false;
+                return false;
+            };
+
         });
 
 
@@ -68,18 +94,20 @@ $(document).ready(function () {
                 desc: desc,
                 date: date
             }
-            $.ajax({
-                type: "POST",
-                url: '/nouvelle-tache',
-                data: json,
-                success: function (data) {
-                    updateTask(data, name, desc, date);
-                    console.log(data.id);
-                    location.reload();
-                }
-            })
-            resetState();
-            return false;
+            if (checkData(name, desc, date) == true) {
+                $.ajax({
+                    type: "POST",
+                    url: '/nouvelle-tache',
+                    data: json,
+                    success: function (data) {
+                        updateTask(data, name, desc, date);
+                        console.log(data.id);
+                        location.reload();
+                    }
+                })
+                resetState();
+                return false;
+            };
 
         });
 
@@ -108,11 +136,10 @@ $(document).ready(function () {
         $("td.columndesc" + data.id).text(desc);
         $("td.columndate" + data.id).text(date);
     }
-    // checkdata
 
 
 
-
+    // jquery datepicker translation
     var dateToday = new Date();
     $('.datetimepicker').datepicker({
         altField: ".datepicker",

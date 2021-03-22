@@ -1,0 +1,11 @@
+<div class="col-12 text-center">
+	{% if notifications|length > 0 %}
+		<h1>liste des taches ce jour
+		</h1>
+		{% for t in notifications %}
+			<p>{{t.name}}</p>
+
+		{% endfor %}
+	{% endif %}
+
+</div>

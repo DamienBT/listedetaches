@@ -35,7 +35,6 @@ return [
                 .')'
                 .'|/edit\\-tache/([^/]++)(*:190)'
                 .'|/delete\\-tache/([^/]++)(*:221)'
-                .'|/tache/([^/]++)(*:244)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -47,9 +46,8 @@ return [
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         190 => [[['_route' => 'task_edit', '_controller' => 'App\\Controller\\TaskController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        221 => [[['_route' => 'task_delete', '_controller' => 'App\\Controller\\TaskController::delete'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        244 => [
-            [['_route' => 'task_get', '_controller' => 'App\\Controller\\TaskController::getTask'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
+        221 => [
+            [['_route' => 'task_delete', '_controller' => 'App\\Controller\\TaskController::delete'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

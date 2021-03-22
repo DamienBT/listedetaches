@@ -1,0 +1,26 @@
+<table class="table">
+	<thead class="thead-light">
+		<tr>
+			<th scope="col">Tache</th>
+			<th scope="col">Description</th>
+			<th scope="col">Date de la tache:</th>
+			<th scope="col">Action</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		{% for task in tasks %}
+			<tr id="{{task.id}}">
+				<td class="columnName{{task.id}}">{{task.name}}</td>
+				<td class="columndesc{{task.id}}">{{task.description}}</td>
+				<td class="columndate{{task.id}}">{{task.beginAt|date('d/m/Y')}}</td>
+				<td>
+					<btn class="btn btn-sm btn-info" data-action="edit" data-id="{{task.id}}">Editer</btn>
+					<btn class="btn btn-sm btn-danger" data-action="delete" data-id="{{task.id}}">Supprimer</a>
+				</td>
+			</tr>
+
+		{% endfor %}
+
+	</tbody>
+</table>

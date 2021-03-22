@@ -24,10 +24,15 @@ class __TwigTemplate_6113c926974ca0d1ea411e804f9ef8589e19d10fa3587f913ec13e599cc
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
+            'body' => [$this, 'block_body'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -39,72 +44,56 @@ class __TwigTemplate_6113c926974ca0d1ea411e804f9ef8589e19d10fa3587f913ec13e599cc
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "task/index.html.twig"));
 
-        // line 1
-        echo "<table class=\"table\">
-\t<thead class=\"thead-light\">
-\t\t<tr>
-\t\t\t<th scope=\"col\">Tache</th>
-\t\t\t<th scope=\"col\">Description</th>
-\t\t\t<th scope=\"col\">Date de la tache:</th>
-\t\t\t<th scope=\"col\">Action</th>
-
-\t\t</tr>
-\t</thead>
-\t<tbody>
-\t\t";
-        // line 12
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["tasks"]) || array_key_exists("tasks", $context) ? $context["tasks"] : (function () { throw new RuntimeError('Variable "tasks" does not exist.', 12, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["task"]) {
-            // line 13
-            echo "\t\t\t<tr id=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 13), "html", null, true);
-            echo "\">
-\t\t\t\t<td class=\"columnName";
-            // line 14
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 14), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "name", [], "any", false, false, false, 14), "html", null, true);
-            echo "</td>
-\t\t\t\t<td class=\"columndesc";
-            // line 15
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 15), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "description", [], "any", false, false, false, 15), "html", null, true);
-            echo "</td>
-\t\t\t\t<td class=\"columndate";
-            // line 16
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 16), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "beginAt", [], "any", false, false, false, 16), "d/m/Y"), "html", null, true);
-            echo "</td>
-\t\t\t\t<td>
-\t\t\t\t\t<btn class=\"btn btn-sm btn-info\" data-action=\"edit\" data-id=\"";
-            // line 18
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 18), "html", null, true);
-            echo "\">Editer</btn>
-\t\t\t\t\t<btn class=\"btn btn-sm btn-danger\" data-action=\"delete\" data-id=\"";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 19), "html", null, true);
-            echo "\">Supprimer</a>
-\t\t\t\t</td>
-\t\t\t</tr>
-
-\t\t";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['task'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 24
-        echo "
-\t</tbody>
-</table>
-";
+        $this->parent = $this->loadTemplate("base.html.twig", "task/index.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 3
+    public function block_body($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        // line 4
+        echo "\t<div class=\"container-fluid\">
+\t\t<div class=\"row\">
+\t\t\t";
+        // line 6
+        $this->loadTemplate("_shared/_notification.html.twig", "task/index.html.twig", 6)->display($context);
+        // line 7
+        echo "\t\t\t<div class=\"col-8\">
+\t\t\t\t";
+        // line 8
+        $this->loadTemplate("task/_table.html.twig", "task/index.html.twig", 8)->display($context);
+        // line 9
+        echo "\t\t\t</div>
+\t\t\t<div id=\"form\" class=\"col-4\">
+
+\t\t\t\t";
+        // line 12
+        $this->loadTemplate("task/_form.html.twig", "task/index.html.twig", 12)->display($context);
+        // line 13
+        echo "\t\t\t</div>
+
+\t\t</div>
+
+\t</div>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
     }
 
@@ -120,37 +109,29 @@ class __TwigTemplate_6113c926974ca0d1ea411e804f9ef8589e19d10fa3587f913ec13e599cc
 
     public function getDebugInfo()
     {
-        return array (  99 => 24,  88 => 19,  84 => 18,  77 => 16,  71 => 15,  65 => 14,  60 => 13,  56 => 12,  43 => 1,);
+        return array (  86 => 13,  84 => 12,  79 => 9,  77 => 8,  74 => 7,  72 => 6,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<table class=\"table\">
-\t<thead class=\"thead-light\">
-\t\t<tr>
-\t\t\t<th scope=\"col\">Tache</th>
-\t\t\t<th scope=\"col\">Description</th>
-\t\t\t<th scope=\"col\">Date de la tache:</th>
-\t\t\t<th scope=\"col\">Action</th>
+        return new Source("{% extends \"base.html.twig\" %}
 
-\t\t</tr>
-\t</thead>
-\t<tbody>
-\t\t{% for task in tasks %}
-\t\t\t<tr id=\"{{task.id}}\">
-\t\t\t\t<td class=\"columnName{{task.id}}\">{{task.name}}</td>
-\t\t\t\t<td class=\"columndesc{{task.id}}\">{{task.description}}</td>
-\t\t\t\t<td class=\"columndate{{task.id}}\">{{task.beginAt|date('d/m/Y')}}</td>
-\t\t\t\t<td>
-\t\t\t\t\t<btn class=\"btn btn-sm btn-info\" data-action=\"edit\" data-id=\"{{task.id}}\">Editer</btn>
-\t\t\t\t\t<btn class=\"btn btn-sm btn-danger\" data-action=\"delete\" data-id=\"{{task.id}}\">Supprimer</a>
-\t\t\t\t</td>
-\t\t\t</tr>
+{% block body %}
+\t<div class=\"container-fluid\">
+\t\t<div class=\"row\">
+\t\t\t{% include \"_shared/_notification.html.twig\" %}
+\t\t\t<div class=\"col-8\">
+\t\t\t\t{% include \"task/_table.html.twig\" %}
+\t\t\t</div>
+\t\t\t<div id=\"form\" class=\"col-4\">
 
-\t\t{% endfor %}
+\t\t\t\t{% include \"task/_form.html.twig\" %}
+\t\t\t</div>
 
-\t</tbody>
-</table>
+\t\t</div>
+
+\t</div>
+{% endblock %}
 ", "task/index.html.twig", "/var/www/templates/task/index.html.twig");
     }
 }

@@ -19,5 +19,4 @@ return [
     'task_new' => [[], ['_controller' => 'App\\Controller\\TaskController::new'], [], [['text', '/nouvelle-tache']], [], []],
     'task_edit' => [['id'], ['_controller' => 'App\\Controller\\TaskController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/edit-tache']], [], []],
     'task_delete' => [['id'], ['_controller' => 'App\\Controller\\TaskController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/delete-tache']], [], []],
-    'task_get' => [['id'], ['_controller' => 'App\\Controller\\TaskController::getTask'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/tache']], [], []],
 ];
