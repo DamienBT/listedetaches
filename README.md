@@ -8,6 +8,8 @@ Comment lancer le projet :
 
 - recuperer le dossier existant via Git ou télécharger le dossier depuis Github.
 
+git clone https://github.com/DamienBT/listedetaches.git
+
 - Configurer la ligne du fichier caché .env avec les informations ou se situe votre base de données en remplacant les valeurs par defaut par les informations de connexions de votre serveur de la ligne ci dessous:
 "DATABASE_URL=mysql://utilisateur:motdepasse@adressedelabasededonnées:portdelabasededonnées/nomdelabasepouvotreprojet"
 
