@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 text-center">
+				{% if notifications|length > 0 %}
+					<h1>liste des taches ce jour
+					</h1>
+					{% for t in notifications %}
+						<p>{{t.name}}</p>
+
+					{% endfor %}
+				{% endif %}
+
+			</div>
+			<div class="col-8">
+				{% include "task/index.html.twig" %}
+			</div>
+			<div id="form" class="col-4">
+
+				{% include "task/_form.html.twig" %}
+			</div>
+
+		</div>
+
+	</div>
+{% endblock %}

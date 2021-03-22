@@ -1,0 +1,45 @@
+{# {{form_start(taskType)}}
+
+<div class="form-group">
+	{{form_row(taskType.name, { 'label': 'Nom de l\'évènement ', 'attr': {'class': 'form-control'}})}}
+</div>
+
+<div class="form-group">
+
+	{{form_row(taskType.description, { 'label': 'Description', 'attr': {'class': 'form-control'}})}}
+</div>
+
+<div class="form-group">
+
+	{{form_row(taskType.beginAt, { 'label': 'Date de l\'evenement', 'attr': {'class': 'form-control datetimepicker'}})}}
+</div>
+
+<div class="form-group">
+	<button class="btn btn-success" data-action="create" id="buttonSend">Envoyer</button>
+</div>
+{{form_end(taskType)}} #}
+
+
+<div class="form-group">
+	<label for="name">Nom de l'evenement</label>
+	<input type="text" class="form-control" name="name" id="task_name">
+
+</div>
+
+<div class="form-group">
+	<label for="name">Description</label>
+
+	<input type="text" class="form-control" name="description" id="task_description">
+</div>
+
+<div class="form-group">
+	<label for="name">Date event</label>
+
+	<input type="datetime" class="form-control datetimepicker" name="beginAt" id="task_beginAt">
+</div>
+
+<div class="form-group">
+	<btn class="btn btn-success" data-action="create" id="buttonSend">Envoyer</btn>
+	<btn class="btn btn-success" data-action="save" id="buttonEdit">Modifier</btn>
+
+</div>
