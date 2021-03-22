@@ -13983,3 +13983,5 @@
 [2021-03-22T08:05:10.393739+00:00] doctrine.DEBUG: "START TRANSACTION" [] []
 [2021-03-22T08:05:10.394053+00:00] doctrine.DEBUG: UPDATE task SET name = ?, begin_at = ? WHERE id = ? ["dd,eemdedme","2021-03-22T00:00:00+00:00",251] []
 [2021-03-22T08:05:10.394742+00:00] doctrine.DEBUG: "COMMIT" [] []
+[2021-03-22T08:08:01.921549+00:00] php.DEBUG: Warning: include(/var/www/var/cache/de_/App_KernelDevDebugContainer.php): failed to open stream: No such file or directory {"exception":{"Symfony\\Component\\ErrorHandler\\Exception\\SilencedErrorContext":{"severity":2,"file":"/var/www/vendor/symfony/http-kernel/Kernel.php","line":469,"trace":[{"file":"/var/www/vendor/symfony/http-kernel/Kernel.php","line":469,"function":"include"}],"count":1}}} []
+[2021-03-22T08:08:01.922315+00:00] php.DEBUG: Warning: include(): Failed opening '/var/www/var/cache/de_/App_KernelDevDebugContainer.php' for inclusion (include_path='.:/usr/local/lib/php') [] []

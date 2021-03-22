@@ -71,9 +71,7 @@ return [[
 '%5B%5BC%5DApp%5CController%5CTaskController%23edit%5D%5B1%5D' => 2,
 '%5BApp%5CController%5CTaskController%23delete%5D%5B1%5D' => 6,
 '%5B%5BC%5DApp%5CController%5CTaskController%23delete%5D%5B1%5D' => 2,
-'%5BApp%5CController%5CTaskController%23getTask%5D%5B1%5D' => 7,
-'%5B%5BC%5DApp%5CController%5CTaskController%23getTask%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CTask%5D%5B1%5D' => 8,
+'%5BApp%5CEntity%5CTask%5D%5B1%5D' => 7,
 '%5B%5BC%5DApp%5CEntity%5CTask%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CTask%23getId%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CTask%23getId%5D%5B1%5D' => 2,
@@ -89,13 +87,13 @@ return [[
 '%5B%5BC%5DApp%5CEntity%5CTask%23getBeginAt%5D%5B1%5D' => 2,
 '%5BApp%5CEntity%5CTask%23setBeginAt%5D%5B1%5D' => 1,
 '%5B%5BC%5DApp%5CEntity%5CTask%23setBeginAt%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CTask%24id%5D%5B1%5D' => 9,
+'%5BApp%5CEntity%5CTask%24id%5D%5B1%5D' => 8,
 '%5B%5BC%5DApp%5CEntity%5CTask%24id%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CTask%24name%5D%5B1%5D' => 10,
+'%5BApp%5CEntity%5CTask%24name%5D%5B1%5D' => 9,
 '%5B%5BC%5DApp%5CEntity%5CTask%24name%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CTask%24description%5D%5B1%5D' => 11,
+'%5BApp%5CEntity%5CTask%24description%5D%5B1%5D' => 10,
 '%5B%5BC%5DApp%5CEntity%5CTask%24description%5D%5B1%5D' => 2,
-'%5BApp%5CEntity%5CTask%24beginAt%5D%5B1%5D' => 12,
+'%5BApp%5CEntity%5CTask%24beginAt%5D%5B1%5D' => 11,
 '%5B%5BC%5DApp%5CEntity%5CTask%24beginAt%5D%5B1%5D' => 2,
 '%5BDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%5D%5B1%5D' => 1,
 '%5B%5BC%5DDoctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%5D%5B1%5D' => 2,
@@ -638,7 +636,7 @@ return [[
 
 0 => 'N;',
 1 => [],
-2 => 1616345344,
+2 => 1616400483,
 3 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -748,34 +746,6 @@ return [[
 7 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
-        ],
-        null,
-        [
-            'Symfony\\Component\\Routing\\Annotation\\Route' => [
-                'path' => [
-                    '/tache/{id}',
-                ],
-                'name' => [
-                    'task_get',
-                ],
-                'methods' => [
-                    [
-                        'GET',
-                        'POST',
-                    ],
-                ],
-            ],
-        ],
-        [
-            $o[0],
-        ],
-        []
-    );
-},
-8 => static function () {
-    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
-        $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
         ],
         null,
@@ -792,7 +762,7 @@ return [[
         []
     );
 },
-9 => static function () {
+8 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Id'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Id')),
@@ -815,7 +785,7 @@ return [[
         []
     );
 },
-10 => static function () {
+9 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
@@ -834,7 +804,7 @@ return [[
         []
     );
 },
-11 => static function () {
+10 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
@@ -856,7 +826,7 @@ return [[
         []
     );
 },
-12 => static function () {
+11 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
