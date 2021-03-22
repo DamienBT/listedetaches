@@ -21,5 +21,5 @@ Comment lancer le projet :
 
 - lancer la commande "APP_ENV=prod APP_DEBUG=0 php bin/console cache:clear"
 
-votre applicatione st prete a l'emploi
+votre applicatione est prete a l'emploi
 
